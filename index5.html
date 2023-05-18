@@ -1,0 +1,66 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Emoji Mood</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			font-size: 10vw;
+		}
+		
+		.emoji {
+			animation: mood 5s linear infinite;
+		}
+		
+		@keyframes mood {
+			0% {transform: rotate(0deg);}
+			25% {transform: rotate(5deg);}
+			50% {transform: rotate(0deg);}
+			75% {transform: rotate(-5deg);}
+			100% {transform: rotate(0deg);}
+		}
+		
+		.happy {background-color: #ffe066;}
+		.sad {background-color: #6c757d;}
+		.angry {background-color: #ff6b6b;}
+		.surprised {background-color: #1abc9c;}
+		.confused {background-color: #bdc3c7;}
+		.love {background-color: #ff9191;}
+		.cool {background-color: #3498db;}
+		.excited {background-color: #f39c12;}
+	</style>
+</head>
+<body class="sad">
+<a href="index6.html" style="font-size:1rem;height:0;">Surprisingly Again, Yet Another Site</a>
+	<div class="emoji">:(</div>
+	<script>
+		var emojis = [':)', ':(', ':D', ':O', ';)', ':P', ':@', ':|', ':*'];
+		var mood = emojis[Math.floor(Math.random() * emojis.length)];
+		document.querySelector('.emoji').textContent = mood;
+		
+		if (mood == ':)') {
+			document.body.classList.add('happy');
+		} else if (mood == ':(') {
+			document.body.classList.add('sad');
+		} else if (mood == ':@') {
+			document.body.classList.add('angry');
+		} else if (mood == ':O') {
+			document.body.classList.add('surprised');
+		} else if (mood == ':|') {
+			document.body.classList.add('confused');
+		} else if (mood == ':*') {
+			document.body.classList.add('love');
+		} else if (mood == ';)') {
+			document.body.classList.add('cool');
+		} else if (mood == ':P') {
+			document.body.classList.add('excited');
+		}
+	</script>
+
+
+</body>
