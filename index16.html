@@ -1,0 +1,80 @@
+<head>
+	<title>Payouts Table</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		table {
+			border-collapse: collapse;
+			box-shadow: 0 0 20px rgba(0,0,0,0.1);
+			background-color: #fff;
+		}
+		td, th {
+			border: 1px solid #ddd;
+			padding: 10px;
+			text-align: center;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<h1>Payouts Table: </h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Currency</th>
+				<th>Amount</th>
+				<th>Devices</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>USD</td>
+				<td>100</td>
+				<td><span id="usdRandom">47</span></td>
+			</tr>
+			<tr>
+				<td>EUR</td>
+				<td>80</td>
+				<td><span id="eurRandom">23</span></td>
+			</tr>
+			<tr>
+				<td>XMR</td>
+				<td>50</td>
+				<td><span id="xmrRandom">52</span></td>
+			</tr>
+			<tr>
+				<td>BTC</td>
+				<td>120</td>
+				<td><span id="btcRandom">56</span></td>
+			</tr>
+			<tr>
+				<td>ETH</td>
+				<td>200</td>
+				<td><span id="ethRandom">16</span></td>
+			</tr>
+		</tbody>
+	</table>
+<a href="/index2.html">Other Site</a>
+
+	<script>
+		document.getElementById("usdRandom").innerHTML = Math.floor(Math.random() * 100) + 1;
+		document.getElementById("xmrRandom").innerHTML = Math.floor(Math.random() * 100) + 1;
+		document.getElementById("btcRandom").innerHTML = Math.floor(Math.random() * 100) + 1;
+		document.getElementById("eurRandom").innerHTML = Math.floor(Math.random() * 100) + 1;
+		document.getElementById("ethRandom").innerHTML = Math.floor(Math.random() * 100) + 1;
+	</script>
+
+
+</body>
