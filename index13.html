@@ -1,0 +1,60 @@
+<head>
+	<title>Random Sentences</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		h1 {
+			color: #008080;
+			text-align: center;
+		}
+		
+		#sentence {
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+			max-width: 500px;
+			font-size: 1.5em;
+			text-align: center;
+		}
+		
+		#new-sentence {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			background-color: #008080;
+			color: #ffffff;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.2em;
+			cursor: pointer;
+		}
+		
+		#new-sentence:hover {
+			background-color: #004d4d;
+		}
+	</style>
+</head>
+<body>
+	<h1>Random Sentences</h1>
+	<div id="sentence"></div>
+	<button id="new-sentence" onclick="getSentence()">New Sentence</button>
+
+	<script>
+		function getSentence() {
+			fetch("https://random-word-api.herokuapp.com/word?number=50")
+				.then(response => response.json())
+				.then(words => {
+					const sentence = words.join(" ");
+					document.getElementById("sentence").innerHTML = sentence;
+				})
+				.catch(error => console.log(error));
+		}
+	</script>
+
+
+</body>
