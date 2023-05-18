@@ -1,0 +1,115 @@
+<head>
+    <title>Animation Example</title>
+    <style>
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100px);
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes scale {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.5);
+        }
+      }
+
+      .slide {
+        animation: slide 2s ease-in-out alternate infinite;
+      }
+
+      .rotate {
+        animation: rotate 3s linear infinite;
+      }
+
+      .scale {
+        animation: scale 2s ease-in-out alternate infinite;
+      }
+
+      .pulse {
+        animation: pulse 1s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+      }
+
+      .shape {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        border-radius: 50%;
+      }
+
+      .square {
+        background-color: red;
+      }
+
+      .circle {
+        background-color: blue;
+      }
+
+      .triangle {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid green;
+      }
+
+      h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 36px;
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px #333;
+      }
+
+      p {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+      }
+    </style>
+  </head>
+<body>
+    <div class="shape square slide"></div>
+    <div class="shape circle rotate"></div>
+    <div class="shape triangle scale"></div>
+    <div class="shape square pulse"></div>
+    <a href="/html16" aria-label="animations">Check out these awesome animations</a>
+  
+
+</body>
