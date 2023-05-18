@@ -1,0 +1,44 @@
+<head>
+		<title>Cookie Clicker</title>
+		<style>
+			body {
+				background-image: url("background.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				color: white;
+				font-family: Arial, sans-serif;
+			}
+			
+			#cookie {
+				width: 200px;
+				height: 200px;
+				background-image: url("cookie.png");
+				background-size: contain;
+				background-repeat: no-repeat;
+				cursor: pointer;
+			}
+			
+			#counter {
+				font-size: 3em;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+<body>
+  <a href="/html10" aria-label="cookie"><h1>Cookie Clicker</h1></a>
+		<div id="cookie"></div>
+		<div id="counter">0</div>
+		
+		<script>
+			var cookie = document.getElementById("cookie");
+			var counter = document.getElementById("counter");
+			var count = 0;
+			
+			cookie.addEventListener("click", function() {
+				count++;
+				counter.innerHTML = count;
+			});
+		</script>
+	
+
+</body>
