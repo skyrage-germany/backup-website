@@ -1,0 +1,66 @@
+<head>
+      <title>Next target</title>
+      <style>
+         @keyframes fadein {
+         from { opacity: 0; }
+         to   { opacity: 1; }
+         }
+         h1 {
+         text-align: center;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         color: #1c1c1c;
+         text-shadow: 2px 2px #c5c5c5;
+         }
+         .name {
+         margin: 0 auto;
+         width: 50%;
+         padding: 10px;
+         border: 1px solid black;
+         border-radius: 5px;
+         text-align: center;
+         font-size: 48px;
+         font-weight: bold;
+         font-family: 'Press Start 2P', cursive;
+         background-color: #f2f2f2;
+         animation: fadein 2s;
+         }
+      </style>
+      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <h1>Next target:</h1>
+      <div class="name" id="name">Music Disc (Blocks)</div>
+<br><a href="index3.html">Another Site</a>
+      <script>
+         var names = [
+         "Steve", "Alex", "Notch", "Herobrine", "Enderman",
+         "Creeper", "Zombie", "Skeleton", "Spider", "Ghast",
+         "Slime", "Magma Cube", "Blaze", "Witch", "Villager",
+         "Iron Golem", "Snow Golem", "Ocelot", "Wolf", "Pig",
+         "Cow", "Chicken", "Sheep", "Mooshroom", "Bat",
+         "Squid", "Guardian", "Elder Guardian", "Dolphin", "Turtle",
+         "Phantom", "Pillager", "Vindicator", "Evoker", "Illusioner",
+         "Zombie Pigman", "Husk", "Stray", "Drowned", "Wither Skeleton",
+         "Beacon", "Enchantment Table", "Anvil", "Chest", "Furnace",
+         "Redstone", "Diamond", "Emerald", "Gold", "Iron",
+         "Coal", "Lapis Lazuli", "Obsidian", "Netherrack", "End Stone",
+         "Nether Quartz", "Mushroom Block", "Hay Bale", "Grass Block", "Sand",
+         "Sandstone", "Clay", "Brick Block", "Bookshelf", "Jukebox",
+         "Note Block", "Crafting Table", "Bed", "Torch", "Redstone Torch",
+         "Ladder", "Sign", "Chest Minecart", "Furnace Minecart", "TNT Minecart",
+         "Hopper Minecart", "Boat", "Minecart", "Redstone Repeater", "Redstone Comparator",
+         "Dispenser", "Dropper", "Observer", "Piston", "Sticky Piston",
+         "TNT", "Firework Rocket", "Elytra", "Fishing Rod", "Bow",
+         "Arrow", "Trident", "Shield", "Horse", "Donkey",
+         "Mule", "Polar Bear", "Panda", "Llama", "Rabbit",
+         "Fox", "Wolf", "Cat", "Parrot", "Pufferfish",
+         "Cod", "Salmon", "Tropical Fish", "Nautilus Shell", "Heart of the Sea",
+         "Music Disc (13)", "Music Disc (Cat)", "Music Disc (Blocks)", "Music Disc (Chirp)", "Music Disc (Far)",
+         "Music Disc (Mall)", "Music Disc (Mellohi)", "Music Disc (Stal)", "Music Disc (Strad)", "Music Disc (Ward)"
+         ];
+         var randomName = names[Math.floor(Math.random() * names.length)];
+         document.getElementById("name").innerHTML = randomName;
+      </script>
+   
+
+</body>
