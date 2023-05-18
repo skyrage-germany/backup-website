@@ -1,0 +1,109 @@
+<head>
+      <title>Total Bots</title>
+      <style>
+         body {
+         background-color: #f2f2f2;
+         font-family: Arial, sans-serif;
+         font-size: 16px;
+         margin: 0;
+         padding: 0;
+         }
+         .container {
+         border: 1px solid #ddd;
+         margin: 10px auto;
+         max-width: 800px;
+         padding: 10px;
+         animation: fadeIn 1s ease;
+         }
+         .message {
+         background-color: #fff;
+         border-radius: 5px;
+         box-shadow: 2px 2px 5px #ddd;
+         margin: 5px;
+         padding: 10px;
+         }
+         .message.connect {
+         color: #1a75ff;
+         animation: slideInLeft 0.5s ease;
+         }
+         .message.disconnect {
+         color: #ff4d4d;
+         animation: slideInRight 0.5s ease;
+         }
+         .message .name {
+         font-weight: bold;
+         }
+         .message .time {
+         color: #999;
+         font-size: 12px;
+         }
+         @keyframes fadeIn {
+         from {
+         opacity: 0;
+         }
+         to {
+         opacity: 1;
+         }
+         }
+         @keyframes slideInLeft {
+         from {
+         transform: translateX(-100%);
+         }
+         to {
+         transform: translateX(0);
+         }
+         }
+         @keyframes slideInRight {
+         from {
+         transform: translateX(100%);
+         }
+         to {
+         transform: translateX(0);
+         }
+         }
+      </style>
+   </head>
+<body>
+      <div class="container">
+         <div class="message connect">
+            <span class="name">DESKTOP-0O3VMGV</span> has connected.
+            <span class="time">11:33 AM</span>
+         </div>
+         <div class="message disconnect">
+            <span class="name">DESKTOP-ARPN96R</span> has disconnected.
+            <span class="time">11:36 AM</span>
+         </div>
+         <div class="message connect">
+            <span class="name">DESKTOP-NUN0RV5</span> has connected.
+            <span class="time">11:42 AM</span>
+         </div>
+         <div class="message disconnect">
+            <span class="name">DESKTOP-JJEQ12B</span> has disconnected.
+            <span class="time">11:45 AM</span>
+         </div>
+         <div class="message connect">
+            <span class="name">DESKTOP-J101SS7</span> has connected.
+            <span class="time">11:46 AM</span>
+         </div>
+         <div class="message connect">
+            <span class="name">DESKTOP-4O66I5K</span> has connected.
+            <span class="time">11:48 AM</span>
+         </div>
+         <div class="message disconnect">
+            <span class="name">DESKTOP-XTJD54</span> has disconnected.
+            <span class="time">11:50 AM</span>
+         </div>
+      </div>
+      <script>
+         const messages = document.querySelectorAll('.message');
+         
+         messages.forEach(message => {
+             message.addEventListener('click', () => {
+                 message.classList.toggle('active');
+             });
+         });
+           
+      </script>
+   
+
+</body>
